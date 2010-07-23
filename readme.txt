@@ -10,7 +10,8 @@ This WordPress Plugin provides a very easy way to load the well known jQuery and
 It is cool to write Blog Posts about JQuery and include some ready to work <a href="http://saquery.com/wordpress/getmovingjquery/" target="_blank" >JQuery sample code</a>.
 
 == Description ==
-
+<strong>Update Notes to version 1.0.1:</strong>
+Be shure to check inclusion of JQeury in the admistration backend.
 This WordPress Plugin provides a very easy way to load the well known jQuery and jQuery UI Javascript library with the basic CSS theme from Google CDN.
 It is cool to write Blog Posts about JQuery and include some ready to work <a href="http://saquery.com/wordpress/getmovingjquery/" target="_blank" >JQuery sample code</a>.
 
