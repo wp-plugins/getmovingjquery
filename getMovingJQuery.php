@@ -3,15 +3,13 @@
 Plugin Name: getMovingJQuery
 Plugin URI: http://saquery.com/wordpress/getMovingJQuery/
 Description: get moving JQuery.
-Version: 1.0.1
+Version: 1.0.2
 Author: Stephan Ahlf
 Author URI: http://saquery.com/wordpress/getMovingJQuery/
 */
 	global $saq;
 	$saq = new saq();
 
-	add_action('admin_menu', array('saq', 'admin_menu'));
-	add_action('wp_head', array('saq', 'wp_head'), 0);
 	
 	function _saq_option($id, $defaultValue){
 		$result = get_option($id);
@@ -34,12 +32,30 @@ Author URI: http://saquery.com/wordpress/getMovingJQuery/
 
 		function wp_head(){		
 			$cdnURL = 'http://ajax.googleapis.com/ajax/libs/';
-			if (get_option('includeJQueryCore')) echo '<script type="text/javascript" language="javascript" src="'.$cdnURL.'jquery/'._saq_option('JQueryCoreVersion','1.4.2').'/jquery.min.js"></script>'."\n";
-			if (get_option('includeJQueryUI')) echo '<script type="text/javascript" language="javascript" src="'.$cdnURL.'jqueryui/'._saq_option('JQueryUIVersion','1.8.2').'/jquery-ui.min.js"></script>'."\n";
+			if (get_option('includeJQueryCore')) {
+				$v = _saq_option('JQueryCoreVersion','1.4.2');
+				$u = $cdnURL.'jquery/'.$v.'/jquery.min.js';
+				wp_deregister_script( 'jquery' );
+				wp_register_script( 'jquery', $u, array(), $v, false);
+				wp_enqueue_script('jqueryui');
+				
+			}
+			if (get_option('includeJQueryUI')) {
+				$v_ui = _saq_option('JQueryUIVersion','1.8.2');
+				$u = $cdnURL.'jqueryui/'.$v_ui.'/jquery-ui.min.js';
+
+				wp_deregister_script( 'jqueryui' );
+				wp_register_script( 'jqueryui', $u, array('jquery'), $v_ui, false);
+				wp_enqueue_script('jqueryui');
+
+			}			
 			if (get_option('includeJQueryTheme')) {
 				$theme = strtolower(_saq_option('JQueryUIThemeName','base')); 
 				$theme = str_replace(" ","-",$theme); 
-				echo '<link rel="StyleSheet" href="'.$cdnURL.'jqueryui/1.8/themes/'.$theme.'/jquery-ui.css" type="text/css" media="screen" />'."\n";
+				$u = $cdnURL.'jqueryui/'.$v_ui.'/themes/'.$theme.'/jquery-ui.css';
+				wp_deregister_style( 'jquery-ui-css' );
+				wp_register_style( 'jquery-ui-css', $u, false, $v_ui, 'screen' );
+				wp_enqueue_style('jquery-ui-css');
 			}
 		}
 		
@@ -54,4 +70,11 @@ Author URI: http://saquery.com/wordpress/getMovingJQuery/
 <?php			
 		}
 	}
+
+
+
+	add_action('admin_menu', array('saq', 'admin_menu'));
+	add_action('init', array('saq', 'wp_head'), 0);
+
+	
 ?>
