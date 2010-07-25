@@ -4,7 +4,7 @@ Donate link: http://saquery.com/wordpress/getMovingJQuery
 Tags: JQuery
 Requires at least: 2.9.2
 Tested up to: 3.0
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
 This WordPress Plugin provides a very easy way to load the well known jQuery and jQuery UI Javascript library with the basic CSS theme from Google CDN.
 It is cool to write Blog Posts about JQuery and include some ready to work <a href="http://saquery.com/wordpress/getmovingjquery/" target="_blank" >JQuery sample code</a>.
@@ -16,20 +16,30 @@ It is cool to write Blog Posts about JQuery and include some ready to work <a hr
 
 == Changelog ==
 
-<strong>1.0.1</strong>
-Using wp_register_script now to avoid multiple script loading if other plugins will load / need JQuery.
+<ul>
+	<strong style="color:red;">1.0.3 hotfix</strong>
+	<li>
+		JQuery runs in noconflict mode in Wordpress backend. <br />
+		For that reason getMovingJQuery script inclusions are now only invoked if (is_admin()===false). <br />
+		The bug causes that the Wordpress Administration will not work as expected. Maybe you have to deactivate this plugin before automatic update or update getMovingJQuery manually to version 1.0.3.
+	</li>
+</ul>
 
-<strong>1.0.1</strong>
- - Inclusion of JQuery Core Library is now optional.
- - Inclusion of JQuery UI Library is now optional.
- - Inclusion of JQuery CSS is now optional.
- - Version of JQuery Core Library is now configurable.
- - Version of JQuery UI Library is now configurable.
- - Themename of JQuery CSS Theme is now configurable.
- - User can choose CSS Theme from dropdownbox.
- 
+<ul>
+<strong>1.0.2</strong>
+<li>Inclusion of JQuery Core Library is now optional.</li>
+<li>Inclusion of JQuery UI Library is now optional.</li>
+<li>Inclusion of JQuery CSS is now optional.</li>
+<li>Version of JQuery Core Library is now configurable.</li>
+<li>Version of JQuery UI Library is now configurable.</li>
+<li>Themename of JQuery CSS Theme is now configurable.</li>
+<li>User can choose CSS Theme from dropdownbox.</li>
+</ul> 
+
+<ul>
 <strong>0.0.1</strong>
- - Initial import.
+<li>Initial import.</li>
+</ul>
 
 == Installation ==
 
