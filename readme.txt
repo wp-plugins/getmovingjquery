@@ -4,7 +4,7 @@ Donate link: http://saquery.com/wordpress/getmovingjquery
 Tags: JQuery
 Requires at least: 2.9.2
 Tested up to: 3.0.1
-Stable tag: 1.0.3
+Stable tag: 1.0.3.1
 
 This WordPress Plugin provides a very easy way to load the well known jQuery and jQuery UI Javascript library with the basic CSS theme from Google CDN.
 It is cool to write Blog Posts about JQuery and include some ready to work <a href="http://saquery.com/jquery-template-plugin/" target="_blank" >JQuery sample code</a>.
