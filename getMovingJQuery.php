@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: getMovingJQuery
-Plugin URI: http://saquery.com/wordpress/getMovingJQuery/
+Plugin URI: http://saquery.com/wordpress/getmovingjquery/
 Description: get moving JQuery.
-Version: 1.0.3
+Version: 1.0.3.1
 Author: Stephan Ahlf
-Author URI: http://saquery.com/wordpress/getMovingJQuery/
+Author URI: http://saquery.com/wordpress/getmovingjquery/
 */
 	global $saq;
 	$saq = new saq();
