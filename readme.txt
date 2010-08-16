@@ -27,8 +27,7 @@ It is cool to write Blog Posts about JQuery and include some ready to work <a hr
 	<strong style="color:red;">1.0.3 hotfix</strong>
 	<li>
 		JQuery runs in noconflict mode in Wordpress backend. <br />
-		For that reason getMovingJQuery script inclusions are now only invoked if (is_admin()===false). <br />
-		The bug causes that the Wordpress Administration will not work as expected. Maybe you have to deactivate this plugin before automatic update or update getMovingJQuery manually to version 1.0.3.
+		For that reason getMovingJQuery script inclusions are now only invoked if (is_admin()===false).
 	</li>
 </ul>
 
@@ -52,7 +51,7 @@ It is cool to write Blog Posts about JQuery and include some ready to work <a hr
 
 This section describes how to install the plugin and get it working.
 
-   1. Upload wp-seo-tags.php to the /wp-content/plugins/wp-seo-tags/ directory.
+   1. Upload getmovingjquery.php to the /wp-content/plugins/getmovingjquery/ directory.
    2. Activate the plugin through the ‘Plugins’ menu in WordPress
    3. Activate inclusion of JQuery in the <a href="http://wordpress.org/extend/plugins/getmovingjquery/screenshots/">administration panel</a>. 
    
