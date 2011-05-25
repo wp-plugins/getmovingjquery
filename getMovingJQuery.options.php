@@ -1,4 +1,13 @@
-
+<div class="update-nag"><br>
+	<p><strong>Thank you for using getMovingJQuery! </strong><span style="color:#990000;">If you think this software is useful please support the development with a donation.</span><br>Feel free to contact me for support or feature requests at <a href="http://saquery.com/wordpress/getmovingjquery/" class="saq-external-link" target="_blank">http://saquery.com/wordpress/getmovingjquery/</a> or <a href="mailto:webmaster@saquery.com"> via EMail</a><br>
+	</p><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="SQRUU7JKE7KFS">
+	<input type="image" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/WEBSCR-640-20110429-1/de_DE/i/scr/pixel.gif" width="1" height="1">
+	</form>
+</div>
 <div class="wrap">
 <h2>getMovingJQuery</h2>
 

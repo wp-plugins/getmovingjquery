@@ -3,7 +3,7 @@
 Plugin Name: getMovingJQuery
 Plugin URI: http://saquery.com/wordpress/getmovingjquery/
 Description: get moving JQuery.
-Version: 1.0.3.1
+Version: 1.0.3.2
 Author: Stephan Ahlf
 Author URI: http://saquery.com/wordpress/getmovingjquery/
 */
@@ -61,7 +61,7 @@ Author URI: http://saquery.com/wordpress/getmovingjquery/
 		}
 		
 		function admin_menu(){
-			add_submenu_page('options-general.php', 'getMovingJQuery Options', 'getMovingJQuery', 8, __FILE__,  array('saq', 'options'));
+			add_submenu_page('options-general.php', 'getMovingJQuery Options', 'getMovingJQuery', "administrator", __FILE__,  array('saq', 'options'));
 			add_action( 'admin_init', array('saq','admin_init') );
 		}
 
